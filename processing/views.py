@@ -43,7 +43,7 @@ def upload_file(request):
     return render(request, "cnab/upload.html", {"form": form})
 
 
-def render(request):
+def rendering(request):
     stores = DataPost.objects.all()
     stores_list = []
 

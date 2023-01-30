@@ -90,14 +90,6 @@ WSGI_APPLICATION = "_cnab.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.getenv("POSTGRES_DB"),
-        "USER": os.getenv("POSTGRES_USERNAME"),
-        "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
-        "HOST": "127.0.0.1",
-        "PORT": "5432",
-    },
-    "other_default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }

@@ -1,0 +1,32 @@
+{% extends './index.html' %} {% block content %} {% csrf_token %}
+<h2>Lista de Lojas</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operação</th>
+      <th>Data</th>
+      <th>Hora</th>
+      <th>CPF</th>
+      <th>Loja</th>
+      <th>Valor</th>
+      <th>Proprietário</th>
+      <th>Saldo</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for store in stores_list %}
+    <tr>
+      <td>{{ store.type }}</td>
+      <td>{{ store.date }}</td>
+      <td>{{ store.hour }}</td>
+      <td>{{ store.cpf }}</td>
+      <td>{{ store.store_name }}</td>
+      <td>{{ store.value }}</td>
+      <td>{{ store.owner }}</td>
+      <td>{{ store.total }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
