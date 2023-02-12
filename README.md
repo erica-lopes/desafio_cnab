@@ -25,7 +25,7 @@ verifique as dependência do projeto e efetue a instalaçao:
 
 Agora será necessário configurar as migrações:
 ```bash
->python manage.py makemigration
+>python manage.py makemigrations
 
 após criar o ambiente ative-o:
 >python manage.py migrate
@@ -35,5 +35,10 @@ Agora com o ambiente devidamente configurado, basta apenas rodar a aplicação:
 ```bash
 > python manage.py runserver
 ```
+Endpoint da aplicação:
+```bash
+> http://127.0.0.1:8000/api/upload/
+```
+
 
 
