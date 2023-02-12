@@ -33,7 +33,7 @@ def rendering(request):
             store = DataPost.objects.filter(store_name=name)[0]
             value = DataPost.objects.filter(store_name=name).aggregate(total=Sum("value"))
 
-            store.total = value["total"] / 100
+            store.total = round(int(value["total"]) / 100, 2)
 
             stores_list.append(store)
 
